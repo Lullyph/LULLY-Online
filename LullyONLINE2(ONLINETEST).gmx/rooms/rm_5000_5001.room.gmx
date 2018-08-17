@@ -73,6 +73,7 @@
     <instance objName="obj_wall" x="128" y="160" name="inst_7C83DCC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="224" y="96" name="inst_B4801051" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="htme_obj_network_control" x="544" y="64" name="inst_57103349" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform" x="288" y="64" name="inst_6B9B5681" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
