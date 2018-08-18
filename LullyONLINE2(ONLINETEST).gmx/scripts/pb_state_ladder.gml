@@ -60,7 +60,7 @@ if(self.down_held)
     
     
 //Check for GROUND
-if(place_meeting_rounded(x,y,par_LADDER) && ((position_meeting_rounded(x,y+1,obj_ramp) || (position_meeting_rounded(x,y+1,obj_wall) || (position_meeting_rounded(x,y+5,PAR_Platform)))&& down_held)))
+if(place_meeting_rounded(x,y,par_LADDER) && ((position_meeting_rounded(x,y+1,obj_ramp) || (position_meeting_rounded(x,y+1,obj_wall) || (position_meeting_rounded(x,y+5,PAR_Platform)))&& self.down_held)))
 {
     state_switch("Air");
 }

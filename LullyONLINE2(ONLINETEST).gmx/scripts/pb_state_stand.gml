@@ -45,7 +45,7 @@ if(self.up_held && place_meeting_rounded(x,y,par_LADDER))
 //LADDER state switch climb DOWN
 if(self.down_held && place_meeting_rounded(x,y+16,par_LADDER))
 {
-    x=par_LADDER.x+16;
+    self.x=par_LADDER.x+16;
     y += 1;
     state_switch("Ladder");
 }

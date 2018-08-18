@@ -153,6 +153,10 @@ mp_add("playerName","name",buffer_string,60*room_speed);
 mp_setType("playerName",mp_type.SMART);
 mp_add("controls","up_held,down_held,left_held,right_held,run_held,jump_pressed,jump_held,jump_released",buffer_bool,1);
 
+mp_add("properties","grav,max_grav,stick_to_ground,slide_factor,walk_max,walk_accel,run_max,run_accel",buffer_bool,1);
+mp_add("AirControl","air_control_enabled,air_x_accel,jump_strength,jump_hold_limit",buffer_bool,1);
+mp_add("GeneralHelpers","timer,scale",buffer_bool,1);
+
 /** 
  * By the way:
  * Our object player is persistent. That means it will travel through rooms without getting destroyed.
@@ -299,6 +303,8 @@ self.scale=1;
   **/
   
 self.name = mp_map_syncOut("name", self.name);
+
+//controls
 self.up_held = mp_map_syncOut("up_held", self.up_held);
 self.down_held = mp_map_syncOut("down_held", self.down_held);
 self.left_held = mp_map_syncOut("left_held", self.left_held);
@@ -308,9 +314,30 @@ self.jump_pressed = mp_map_syncOut("jump_pressed", self.jump_pressed);
 self.jump_held = mp_map_syncOut("jump_held", self.jump_held);
 self.jump_released = mp_map_syncOut("up_held", self.jump_released);
 
-
 self.xpos = mp_map_syncOut("xpos", self.xpos);
 self.ypos = mp_map_syncOut("ypos", self.ypos);
+
+//properties
+self.grav = mp_map_syncOut("grav",self.grav);
+self.max_grav = mp_map_syncOut("max_grav",self.max_grav);
+self.stick_to_ground = mp_map_syncOut("stick_to_ground",self.stick_to_ground);
+self.slide_factor = mp_map_syncOut("slide_factor",self.slide_factor);
+self.walk_max = mp_map_syncOut("walk_max",self.walk_max);
+self.walk_accel = mp_map_syncOut("walk_accel",self.walk_accel);
+self.run_max = mp_map_syncOut("run_max",self.run_max);
+self.run_accel = mp_map_syncOut("run_accel",self.run_accel);
+
+//air control
+self.air_control_enabled = mp_map_syncOut("air_control_enabled", self.air_control_enabled);
+self.air_x_accel = mp_map_syncOut("air_x_accel", self.air_x_accel);
+self.jump_strength = mp_map_syncOut("jump_strength", self.jump_strength);
+self.jump_hold_limit = mp_map_syncOut("jump_hold_limit", self.jump_hold_limit);
+
+//general helpers
+//self.timer = mp_map_syncOut("timer", self.timer);
+self.scale = mp_map_syncOut("scale", self.scale);
+
+
 </string>
           </argument>
         </arguments>
@@ -333,6 +360,7 @@ self.ypos = mp_map_syncOut("ypos", self.ypos);
             <kind>1</kind>
             <string>///Update State
 state_update();
+
 </string>
           </argument>
         </arguments>
@@ -392,11 +420,14 @@ self.jump_held=keyboard_check(ord('X'));
 self.jump_released=keyboard_check_released(ord('X'));
 }
 
+
 /** THIS SYNCS THE VARIABLES WITH THE ENGINE
   * Add every variable synced via mp_add here!
   * DO NOT JUST DO THIS FOR THE LOCAL PLAYER! Do it for all!
   */
 mp_map_syncIn("name",self.name);
+
+//controls
 mp_map_syncIn("up_held",self.up_held);
 mp_map_syncIn("down_held",self.down_held);
 mp_map_syncIn("left_held",self.left_held);
@@ -405,6 +436,26 @@ mp_map_syncIn("run_held",self.run_held);
 mp_map_syncIn("jump_pressed",self.jump_pressed);
 mp_map_syncIn("jump_held",self.jump_held);
 mp_map_syncIn("jump_released",self.jump_released);
+
+//properties
+mp_map_syncIn("grav",self.grav);
+mp_map_syncIn("max_grav",self.max_grav);
+mp_map_syncIn("stick_to_ground",self.stick_to_ground);
+mp_map_syncIn("slide_factor",self.slide_factor);
+mp_map_syncIn("walk_max",self.walk_max);
+mp_map_syncIn("walk_accel",self.walk_accel);
+mp_map_syncIn("run_max",self.run_max);
+mp_map_syncIn("run_accel",self.run_accel);
+
+//air control
+mp_map_syncIn("air_control_enabled",self.air_control_enabled);
+mp_map_syncIn("air_x_accel",self.air_x_accel);
+mp_map_syncIn("jump_strength",self.jump_strength);
+mp_map_syncIn("jump_hold_limit",self.jump_hold_limit);
+
+//general helpers
+//mp_map_syncIn("timer",self.timer);
+mp_map_syncIn("scale",self.scale);
 
 
 if (htme_isLocal()) {
