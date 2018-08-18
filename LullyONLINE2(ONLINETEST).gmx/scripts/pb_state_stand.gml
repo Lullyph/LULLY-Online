@@ -36,9 +36,17 @@ if(!position_meeting_rounded(x,y+1,obj_ramp) && !place_meeting_rounded(x,y+1,obj
 //////////////////////////////////////////////////
 
 
-//LADDER state switch
+//LADDER state switch climb UP
 if(self.up_held && place_meeting_rounded(x,y,par_LADDER))
 {
+    state_switch("Ladder");
+}
+
+//LADDER state switch climb DOWN
+if(self.down_held && place_meeting_rounded(x,y+16,par_LADDER))
+{
+    x=par_LADDER.x+16;
+    y += 1;
     state_switch("Ladder");
 }
 
