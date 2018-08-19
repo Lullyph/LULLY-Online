@@ -25,37 +25,6 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Setup State Machine for Platform Boy
-state_machine_init();
-
-//Define States
-state_create("Stand",pb_state_stand);
-state_create("Walk",pb_state_walk);
-state_create("Air",pb_state_air);
-state_create("Ladder",pb_state_ladder);
-state_create("PlatformFall",pb_state_platformfall);
-//Set the default state
-state_init("Stand");
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///ADD TO GMnet ENGINE
 /**
   * Starts syncing.
@@ -164,6 +133,37 @@ mp_add("GeneralHelpers","timer,scale",buffer_bool,1);
  * This way, when entering a room, only our player will actually travel.
  * If you also want to sync non local players between rooms, see object obj_htme_time
  */
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Setup State Machine for Platform Boy
+state_machine_init();
+
+//Define States
+state_create("Stand",pb_state_stand);
+state_create("Walk",pb_state_walk);
+state_create("Air",pb_state_air);
+state_create("Ladder",pb_state_ladder);
+state_create("PlatformFall",pb_state_platformfall);
+//Set the default state
+state_init("Stand");
 </string>
           </argument>
         </arguments>
@@ -773,6 +773,109 @@ if ( room != asset_get_index(nextRoom)
     room_goto(asset_get_index(nextRoom));
 }
 
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///ENTER DOOR BACKUP
+
+/// obj_door's collision event with obj_player
+/*var isLocal;
+with (other) {isLocal = htme_isLocal();}
+
+if (isLocal &amp;&amp; keyboard_check_pressed(vk_up))
+{
+    with(obj_Door)
+    {
+        {
+        if room == rm_5000_5000{
+        
+            room_goto(rm_4999_4999);
+            obj_ONLINETEST.x = 176;
+            obj_ONLINETEST.y = 159; //One Pixel Above
+            }
+        }
+    }
+}
+
+
+if (isLocal &amp;&amp; keyboard_check_pressed(vk_up))
+{
+    with(obj_Door)
+    {
+        {
+        if room == rm_4999_4999{
+        
+            room_goto(rm_5000_5000);
+            obj_ONLINETEST.x = 496;
+            obj_ONLINETEST.y = 127; //One Pixel Above
+            }
+        }
+    }
+}
+
+
+
+///CHECK IF DOOR ENTERED
+
+/** This is the script to change room. It's not that important.
+  * However, it checks if there's a player collision and if that player is local,
+  * that might be useful for you
+  */
+/*
+var isLocal;
+with (other) {isLocal = htme_isLocal();}
+
+if (room == rm_5000_5000){
+if(place_meeting_rounded(x,y,obj_Door)) {   
+    if (isLocal &amp;&amp; self.up_held) {
+       
+                room_goto(rm_4999_4999);
+                x = 416;
+                y = 160;
+            }
+    }
+}
+
+if (room == rm_4999_4999){
+if(place_meeting_rounded(x,y,obj_Door)) {   
+    if (isLocal &amp;&amp; self.up_held) {
+       
+                room_goto(rm_5000_5000);
+                x = 480;
+                y = 128;
+            }
+    }
+}
+
+
+
+/*var isLocal;
+with (other) {isLocal = htme_isLocal();}
+
+
+if (isLocal &amp;&amp; keyboard_check_pressed(vk_up)) {
+    var dest = rm_4999_4999;
+    if (room == rm_4999_4999) dest = rm_5000_5000;
+    room_goto(dest);
 
 }
 </string>

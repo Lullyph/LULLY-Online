@@ -110,6 +110,9 @@
       <sprite>sprites\htme_spr_door</sprite>
       <sprite>sprites\htme_logo</sprite>
     </sprites>
+    <sprites name="Doors">
+      <sprite>sprites\spr_Door</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\FRAME</background>
@@ -384,6 +387,9 @@
     </objects>
     <objects name="Ladders">
       <object>objects\obj_ladder</object>
+    </objects>
+    <objects name="Doors">
+      <object>objects\obj_Door</object>
     </objects>
     <objects name="One Way Platforms">
       <object>objects\obj_platform</object>

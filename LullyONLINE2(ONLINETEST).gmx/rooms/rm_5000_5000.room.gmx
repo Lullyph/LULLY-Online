@@ -52,7 +52,6 @@
   </views>
   <instances>
     <instance objName="htme_obj_network_control" x="64" y="64" name="inst_2A58F63A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="htme_obj_door" x="480" y="96" name="inst_D646664A" locked="0" code="" scaleX="0.15384615957737" scaleY="0.15384615957737" colour="4294967295" rotation="0"/>
     <instance objName="htme_obj_playerlist" x="96" y="64" name="inst_62D25891" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="htme_obj_time" x="128" y="64" name="inst_A904F582" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="htme_obj_chat" x="160" y="64" name="inst_6D68765E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -97,6 +96,7 @@
     <instance objName="obj_platform" x="288" y="96" name="inst_E7B3344C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="320" y="288" name="inst_02AB559D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ONLINETEST" x="160" y="160" name="inst_AA57A44C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Door" x="480" y="96" name="inst_011DFD29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
