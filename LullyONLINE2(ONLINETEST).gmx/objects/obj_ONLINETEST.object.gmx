@@ -162,6 +162,9 @@ state_create("Walk",pb_state_walk);
 state_create("Air",pb_state_air);
 state_create("Ladder",pb_state_ladder);
 state_create("PlatformFall",pb_state_platformfall);
+state_create("StairL",pb_state_stairL);
+state_create("StairR",pb_state_stairR);
+
 //Set the default state
 state_init("Stand");
 </string>

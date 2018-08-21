@@ -113,6 +113,14 @@
     <sprites name="Doors">
       <sprite>sprites\spr_Door</sprite>
     </sprites>
+    <sprites name="Stairs">
+      <sprite>sprites\spr_stairL</sprite>
+      <sprite>sprites\spr_stairR</sprite>
+      <sprite>sprites\spr_stairBOTL</sprite>
+      <sprite>sprites\spr_stairTOPL</sprite>
+      <sprite>sprites\spr_stairTOPR</sprite>
+      <sprite>sprites\spr_stairBOTR</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\FRAME</background>
@@ -127,6 +135,8 @@
       <script>scripts\pb_state_stand.gml</script>
       <script>scripts\pb_state_walk.gml</script>
       <script>scripts\pb_state_ladder.gml</script>
+      <script>scripts\pb_state_stairL.gml</script>
+      <script>scripts\pb_state_stairR.gml</script>
       <scripts name="TEMP BACKUPS">
         <script>scripts\PlatformFALLBackup.gml</script>
         <script>scripts\Airbackup.gml</script>
@@ -387,6 +397,14 @@
     </objects>
     <objects name="Ladders">
       <object>objects\obj_ladder</object>
+    </objects>
+    <objects name="Stairs">
+      <object>objects\obj_stairL</object>
+      <object>objects\obj_stairBOTL</object>
+      <object>objects\obj_stairTOPL</object>
+      <object>objects\obj_stairR</object>
+      <object>objects\obj_stairBOTR</object>
+      <object>objects\obj_stairTOPR</object>
     </objects>
     <objects name="Doors">
       <object>objects\obj_Door</object>

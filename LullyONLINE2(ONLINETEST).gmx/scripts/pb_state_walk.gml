@@ -128,6 +128,8 @@ if(self.jump_pressed)
 //////////////////////////////////////////////////
 
 
+///LADDERS///
+
 //LADDER state switch climb UP
 if(self.up_held && place_meeting_rounded(x,y,par_LADDER))
 {
@@ -142,8 +144,8 @@ if(self.down_held && place_meeting_rounded(x,y+16,par_LADDER))
     state_switch("Ladder");
 }
 
-//PLATFORMS
 
+///PLATFORMS///
 
 //To NOT get stuck in platform
 if((!place_meeting_rounded(x,y+1,obj_wall) && !position_meeting_rounded(x,y+1,obj_ramp)) && !place_meeting_rounded(x,y+5,PAR_Platform))
@@ -151,4 +153,31 @@ if((!place_meeting_rounded(x,y+1,obj_wall) && !position_meeting_rounded(x,y+1,ob
     state_switch("PlatformFall");
 }
 
+///STAIRS///
+
+//Stair Right and Left TOP
+
+if((self.down_held && self.left_held) && place_meeting_rounded(x,y,obj_stairTOPR))
+{
+    state_switch("StairR");
+}
+
+if((self.down_held && self.right_held) && place_meeting_rounded(x,y,obj_stairTOPL))
+{
+    state_switch("StairL");
+}
+
+///STAIRS///
+
+//Stair Right and Left BOT
+
+if((self.up_held && self.right_held) && place_meeting_rounded(x,y,obj_stairBOTR))
+{
+    state_switch("StairR");
+}
+
+if((self.up_held && self.left_held) && place_meeting_rounded(x,y,obj_stairBOTL))
+{
+    state_switch("StairL");
+}
 
