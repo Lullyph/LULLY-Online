@@ -9,8 +9,8 @@ if(state_new)
     image_index=0;
 }
 
-if((self.left_held && !place_meeting_rounded(x-1,y,obj_wall))|| 
-   (self.right_held && !place_meeting_rounded(x+1,y,obj_wall)))
+if((self.left_held && !place_meeting_rounded(x-1,y,PAR_Wall))|| 
+   (self.right_held && !place_meeting_rounded(x+1,y,PAR_Wall)))
 {
     state_switch("Walk");
 }
@@ -22,7 +22,7 @@ if(self.jump_pressed)
 }
 
 ///Check for no ground.
-if(!position_meeting_rounded(x,y+1,obj_ramp) && !place_meeting_rounded(x,y+1,obj_wall) && !place_meeting_rounded(x,y+1,PAR_Platform))
+if(!position_meeting_rounded(x,y+1,obj_ramp) && !place_meeting_rounded(x,y+1,PAR_Wall) && !place_meeting_rounded(x,y+1,PAR_Platform))
 {
     state_switch("Air");
 }
@@ -56,7 +56,7 @@ if(self.down_held && place_meeting_rounded(x,y+16,par_LADDER))
 ///PLATFORMS///
 
 //To NOT get stuck in platform
-if((!place_meeting_rounded(x,y+1,obj_wall) && !position_meeting_rounded(x,y+1,obj_ramp)) && !place_meeting_rounded(x,y+5,PAR_Platform))
+if((!place_meeting_rounded(x,y+1,PAR_Wall) && !position_meeting_rounded(x,y+1,obj_ramp)) && !place_meeting_rounded(x,y+5,PAR_Platform))
 {
     state_switch("PlatformFall");
 }

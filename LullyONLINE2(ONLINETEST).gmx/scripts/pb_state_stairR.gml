@@ -85,7 +85,7 @@ if((position_meeting_rounded(x,y+4,PAR_Platform) && !place_meeting_rounded(x,y,o
 }
 
 if(self.down_held && self.left_held){
-if(position_meeting_rounded(x,y+1,obj_ramp) || (position_meeting_rounded(x,y+1,obj_wall) || (position_meeting_rounded(x,y+1,PAR_Platform))))
+if(position_meeting_rounded(x,y+1,obj_ramp) || (position_meeting_rounded(x,y+1,PAR_Wall) || (position_meeting_rounded(x,y+1,PAR_Platform))))
     {
         state_switch("Stand");
     }

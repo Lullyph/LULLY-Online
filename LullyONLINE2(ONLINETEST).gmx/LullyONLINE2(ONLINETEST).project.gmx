@@ -86,13 +86,20 @@
     </sprites>
     <sprites name="Wall Collision">
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_wall2</sprite>
+      <sprite>sprites\spr_wallLEFT</sprite>
+      <sprite>sprites\spr_wallRIGHT</sprite>
       <sprite>sprites\spr_block</sprite>
       <sprite>sprites\spr_45_ne</sprite>
       <sprite>sprites\spr_45_nw</sprite>
       <sprite>sprites\spr_ramp_buffer</sprite>
       <sprites name="Platforms">
         <sprite>sprites\spr_platform</sprite>
+        <sprite>sprites\spr_platformLEFT</sprite>
+        <sprite>sprites\spr_platformRIGHT</sprite>
         <sprite>sprites\spr_platform_mask</sprite>
+        <sprite>sprites\spr_platform_maskLEFT</sprite>
+        <sprite>sprites\spr_platform_maskRIGHT</sprite>
       </sprites>
       <sprite>sprites\spr_block_mask</sprite>
     </sprites>
@@ -126,6 +133,7 @@
     <background>background\FRAME</background>
     <background>background\FRAME2</background>
     <background>background\FRAME_3</background>
+    <background>background\TILESET1test</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -379,6 +387,7 @@
     <object>objects\obj_camera</object>
     <objects name="Collision Sprites">
       <object>objects\obj_wall</object>
+      <object>objects\obj_wall2</object>
       <object>objects\obj_block</object>
       <object>objects\obj_ramp</object>
       <object>objects\obj_ramp_buffer</object>
@@ -394,6 +403,7 @@
       <object>objects\obj_PLAYER</object>
       <object>objects\par_LADDER</object>
       <object>objects\PAR_Platform</object>
+      <object>objects\PAR_Wall</object>
     </objects>
     <objects name="Ladders">
       <object>objects\obj_ladder</object>
@@ -411,6 +421,11 @@
     </objects>
     <objects name="One Way Platforms">
       <object>objects\obj_platform</object>
+      <object>objects\obj_platformLEFT</object>
+      <object>objects\obj_platformRIGHT</object>
+      <object>objects\obj_platformBIG</object>
+      <object>objects\obj_platformBIGLEFT</object>
+      <object>objects\obj_platformBIGRIGHT</object>
     </objects>
     <objects name="htme_demo">
       <objects name="menu">
@@ -445,6 +460,10 @@
       <room>rooms\rm_5000_5001</room>
       <room>rooms\htme_rom_demo2</room>
       <room>rooms\htme_lanlobby</room>
+      <rooms name="BACKUP test rooms">
+        <room>rooms\room14</room>
+        <room>rooms\room15</room>
+      </rooms>
     </rooms>
     <rooms name="udphp_demo">
       <room>rooms\udphhtme_lobby</room>

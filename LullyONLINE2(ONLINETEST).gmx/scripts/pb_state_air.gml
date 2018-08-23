@@ -29,11 +29,11 @@ y_speed=min(y_speed+grav,max_grav);
 
 
 //Basic Vertical Collision Checking
-if(place_meeting_rounded(x,y+y_speed,obj_wall) || position_meeting_rounded(x,y+y_speed,obj_ramp)) 
+if(place_meeting_rounded(x,y+y_speed,PAR_Wall) || position_meeting_rounded(x,y+y_speed,obj_ramp)) 
 {   //Snap to floor
     x=round(x);
     y=round(y);
-    while(!place_meeting_rounded(x,y+sign(y_speed),obj_wall) && !position_meeting_rounded(x,y+sign(y_speed),obj_ramp))
+    while(!place_meeting_rounded(x,y+sign(y_speed),PAR_Wall) && !position_meeting_rounded(x,y+sign(y_speed),obj_ramp))
         y+=sign(y_speed);
     y_speed=0;
     state_var[0]=false;
@@ -108,11 +108,11 @@ if(air_control_enabled && (self.right_held||self.left_held))
 ///check for horizontal collision
 if(x_speed != 0)
 {
-    if(place_meeting_rounded(x+x_speed,y,obj_wall))
+    if(place_meeting_rounded(x+x_speed,y,PAR_Wall))
     {
         x=round(x);
         y=round(y);
-        while(!place_meeting_rounded(x+sign(x_speed),y,obj_wall))
+        while(!place_meeting_rounded(x+sign(x_speed),y,PAR_Wall))
         {
             x+=sign(x_speed);
         }
@@ -123,7 +123,7 @@ if(x_speed != 0)
 }
 
 //Look For State Switches
-if((place_meeting_rounded(x,y+1,obj_wall) || position_meeting_rounded(x,y,obj_ramp) || place_meeting_rounded(x,y,PAR_Platform)) && y_speed == 0)
+if((place_meeting_rounded(x,y+1,PAR_Wall) || position_meeting_rounded(x,y,obj_ramp) || place_meeting_rounded(x,y,PAR_Platform)) && y_speed == 0)
 {
     if(x_speed==0)
         state_switch("Stand");
