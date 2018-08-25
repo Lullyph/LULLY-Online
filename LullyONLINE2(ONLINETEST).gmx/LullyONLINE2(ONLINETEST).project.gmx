@@ -381,6 +381,7 @@
     <object>objects\obj_platform_boy</object>
     <object>objects\obj_ketty</object>
     <object>objects\obj_ONLINETEST</object>
+    <object>objects\obj_ONLINETEST_BACKUP4</object>
     <object>objects\obj_ONLINETEST_BACKUP3</object>
     <object>objects\obj_ONLINETEST_BACKUP2</object>
     <object>objects\obj_ONLINETEST_BACKUP_</object>
@@ -398,6 +399,7 @@
     </objects>
     <objects name="Misc">
       <object>objects\obj_sign</object>
+      <object>objects\obj_signpost</object>
       <object>objects\VIEW_CHANGER_TEST</object>
       <object>objects\VIEW_CHANGER</object>
     </objects>

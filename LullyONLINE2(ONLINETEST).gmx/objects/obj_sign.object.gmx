@@ -71,12 +71,13 @@ signfont = font_add("m5x7.ttf", 14, false, false, 32, 128);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x,y,obj_PLAYER))
-{
-showtext = 1;
-} else {
-showtext = 0;
-}
+            <string>
+    if (place_meeting(x,y,obj_PLAYER))
+        {
+            showtext = 1;
+    } else {
+            showtext = 0;
+        }
 </string>
           </argument>
         </arguments>

@@ -154,7 +154,6 @@ mp_add("GeneralHelpers","timer,scale",buffer_bool,1);
           <argument>
             <kind>1</kind>
             <string>///Setup State Machine for Platform Boy
-
 state_machine_init();
 
 //Define States
@@ -168,7 +167,6 @@ state_create("StairR",pb_state_stairR);
 
 //Set the default state
 state_init("Stand");
-
 </string>
           </argument>
         </arguments>
@@ -276,54 +274,6 @@ self.timer=0;
 
 self.scale=1;
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// [***SIGNPOST***]
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///FONT ADD
-
-//font
-signfont = font_add("m5x7.ttf", 14, false, false, 32, 128);
-
-//showtext
-showtext = 0;
 </string>
           </argument>
         </arguments>
@@ -935,59 +885,6 @@ if (isLocal &amp;&amp; keyboard_check_pressed(vk_up)) {
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// [***SIGNPOST***]
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///signpost touch
-
-if (htme_isLocal()) {
-
-    if (place_meeting(x,y,obj_signpost))
-        {
-            showtext = 1;
-    } else {
-            showtext = 0;
-        }
-        
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="8" enumb="64">
       <action>
@@ -1008,15 +905,8 @@ if (htme_isLocal()) {
             <kind>1</kind>
             <string>///VIEW ROOMNAME/STATES/SPEED
 
-if (htme_isLocal()) {
-
 display_set_gui_size(800, 600); //WOW!
 
-//draw_set_colour(c_white);
-//draw_set_font(fnt);
-
-if window_get_fullscreen(){
-
 draw_set_colour(c_white);
 draw_set_font(fnt);
 
@@ -1028,102 +918,7 @@ draw_text(20,20,"State: "+string(state_name)
 var roomname = room_get_name(room);
 draw_text(600,20,"Room: "+string(roomname)
          );
-         
-    } else {
-    
-draw_set_colour(c_white);
-draw_set_font(fnt);
 
-draw_text(20,20,"State: "+string(state_name)
-              +"#x_speed: "+string(x_speed)
-              +"#y_speed: "+string(y_speed)
-         );
-
-var roomname = room_get_name(room);
-draw_text(600,20,"Room: "+string(roomname)
-         );
-    }
-}
-
-/*draw_text(20,20,"State: "+string(state_name)
-              +"#x_speed: "+string(x_speed)
-              +"#y_speed: "+string(y_speed)
-         );
-
-var roomname = room_get_name(room);
-draw_text(600,20,"Room: "+string(roomname)
-         );
-
-}
-
-
-/*if window_get_fullscreen(){
-            //draw_set_halign(fa_right);
-            draw_text(obj_signpost.x+35, obj_signpost.y-8, "Hello!#Welcome to LULLY Online!");
-    } else {
-            draw_text(obj_signpost.x+35, obj_signpost.y-8, "Hello!#Welcome to LULLY Online!");
-        }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// [***SIGNPOST***]
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///DISPLAY MESSAGE
-
-/*if (showtext == 1)
-    {
-        //draw_set_halign(fa_right);
-        draw_text(x+135, y-1, "Hello!#Welcome to LULLY Online!");
-    }
-*/
-
-
-
-if (showtext == 1)
-    {
-        if window_get_fullscreen(){
-            //draw_set_halign(fa_right);
-            draw_text(obj_signpost.x+35, obj_signpost.y-8, "Hello!#Welcome to LULLY Online!");
-    } else {
-            draw_text(obj_signpost.x+35, obj_signpost.y-8, "Hello!#Welcome to LULLY Online!");
-        }
-    }
 </string>
           </argument>
         </arguments>
@@ -1180,52 +975,8 @@ draw_self();
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// [***SIGNPOST***]
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///FONT SET
-
-draw_set_font(signfont);
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
-    <event eventtype="9" enumb="27">
+    <event eventtype="9" enumb="82">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -1244,7 +995,7 @@ draw_set_font(signfont);
             <kind>1</kind>
             <string>///GAME RESTART
 
-game_end();
+game_restart();
 </string>
           </argument>
         </arguments>
