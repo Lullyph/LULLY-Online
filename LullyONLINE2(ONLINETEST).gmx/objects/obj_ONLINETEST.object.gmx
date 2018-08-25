@@ -320,7 +320,8 @@ self.scale=1;
             <string>///FONT ADD
 
 //font
-signfont = font_add("m5x7.ttf", 14, false, false, 32, 128);
+signfont = font_add("m5x7.ttf", 72, false, false, 32, 128);
+
 
 //showtext
 showtext = 0;
@@ -1014,19 +1015,22 @@ display_set_gui_size(800, 600); //WOW!
 
 //draw_set_colour(c_white);
 //draw_set_font(fnt);
+//draw_text_transformed(room_width / 2, room_height / 2, "GAME OVER!", 2, 2, image_angle);
+//draw_text_transformed(x, y, string, xscale, yscale, angle);
+
 
 if window_get_fullscreen(){
 
 draw_set_colour(c_white);
 draw_set_font(fnt);
 
-draw_text(20,20,"State: "+string(state_name)
+draw_text_transformed(20,20,"State: "+string(state_name)
               +"#x_speed: "+string(x_speed)
-              +"#y_speed: "+string(y_speed)
+              +"#y_speed: "+string(y_speed),.3,.3,image_angle
          );
 
 var roomname = room_get_name(room);
-draw_text(600,20,"Room: "+string(roomname)
+draw_text_transformed(580,20,"Room: "+string(roomname),.3,.3,image_angle
          );
          
     } else {
@@ -1034,13 +1038,13 @@ draw_text(600,20,"Room: "+string(roomname)
 draw_set_colour(c_white);
 draw_set_font(fnt);
 
-draw_text(20,20,"State: "+string(state_name)
+draw_text_transformed(20,20,"State: "+string(state_name)
               +"#x_speed: "+string(x_speed)
-              +"#y_speed: "+string(y_speed)
+              +"#y_speed: "+string(y_speed),.3,.3,image_angle
          );
 
 var roomname = room_get_name(room);
-draw_text(600,20,"Room: "+string(roomname)
+draw_text_transformed(580,20,"Room: "+string(roomname),.3,.3,image_angle
          );
     }
 }
@@ -1114,14 +1118,19 @@ draw_text(600,20,"Room: "+string(roomname)
 */
 
 
+//draw_text_transformed(x, y, string, xscale, yscale, angle);
+
 
 if (showtext == 1)
     {
         if window_get_fullscreen(){
             //draw_set_halign(fa_right);
-            draw_text(obj_signpost.x+35, obj_signpost.y-8, "Hello!#Welcome to LULLY Online!");
+            draw_set_font(signfont);
+            draw_text_transformed(obj_signpost.x+35, obj_signpost.y-16, "Hello!#Welcome to LULLY Online!",.25,.25,image_angle);
     } else {
-            draw_text(obj_signpost.x+35, obj_signpost.y-8, "Hello!#Welcome to LULLY Online!");
+            draw_set_font(signfont);
+            //draw_text(obj_signpost.x+35, obj_signpost.y-8, "Hello!#Welcome to LULLY Online!");
+            draw_text_transformed(obj_signpost.x+35, obj_signpost.y-16, "Hello!#Welcome to LULLY Online!",.25,.25,image_angle);
         }
     }
 </string>
@@ -1219,7 +1228,7 @@ draw_self();
             <kind>1</kind>
             <string>///FONT SET
 
-draw_set_font(signfont);
+//draw_set_font(signfont);
 </string>
           </argument>
         </arguments>

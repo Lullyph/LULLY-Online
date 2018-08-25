@@ -100,8 +100,8 @@ while (ds_queue_size(queue) &gt; 0) {
     var player_instance = htme_findPlayerInstance(obj_ONLINETEST,sender);
      if (player_instance != -1) {
          var name = (player_instance).name;
-     } else {
-         var name = "(Someboy in another room)";
+     //} else {
+         //var name = "(Someboy in another room)";
      }
     /* End */
     
@@ -209,6 +209,7 @@ for(var i = 0;i&lt;size;i++) {
   */
   
 self.str_id = get_string_async("Send a chat message:","");
+
 
 </string>
           </argument>

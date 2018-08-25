@@ -125,6 +125,7 @@
       <sprite>sprites\spr_stairR</sprite>
       <sprite>sprites\spr_stairBOTL</sprite>
       <sprite>sprites\spr_stairTOPL</sprite>
+      <sprite>sprites\sprite45</sprite>
       <sprite>sprites\spr_stairTOPR</sprite>
       <sprite>sprites\spr_stairBOTR</sprite>
     </sprites>
@@ -402,6 +403,7 @@
       <object>objects\obj_signpost</object>
       <object>objects\VIEW_CHANGER_TEST</object>
       <object>objects\VIEW_CHANGER</object>
+      <object>objects\CHATTEST</object>
     </objects>
     <objects name="PARENTS">
       <object>objects\obj_PLAYER</object>

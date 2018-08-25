@@ -159,6 +159,7 @@ if((!place_meeting_rounded(x,y+1,PAR_Wall) && !position_meeting_rounded(x,y+1,ob
 
 if((self.down_held && self.left_held) && place_meeting_rounded(x,y,obj_stairTOPR))
 {
+    
     state_switch("StairR");
 }
 
