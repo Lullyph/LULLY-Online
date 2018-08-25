@@ -398,6 +398,8 @@
     </objects>
     <objects name="Misc">
       <object>objects\obj_sign</object>
+      <object>objects\VIEW_CHANGER_TEST</object>
+      <object>objects\VIEW_CHANGER</object>
     </objects>
     <objects name="PARENTS">
       <object>objects\obj_PLAYER</object>

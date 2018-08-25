@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///DESCRIPTION
 /**
-  * This obejct controls the time and draws backgrounds.
+  * This object controls the time and draws backgrounds.
   * In room htme_rom_demo it draws a color according to the time.
   * In room htme_rom_demo2 it always draws a "wall", that room is inside a building.
   */
