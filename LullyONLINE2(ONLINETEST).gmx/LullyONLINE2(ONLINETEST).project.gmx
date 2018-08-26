@@ -64,6 +64,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\sprite52</sprite>
     <sprites name="PLAYERS">
       <sprites name="Ketty">
         <sprite>sprites\spr_ketty_mask</sprite>
@@ -87,8 +88,11 @@
     <sprites name="Wall Collision">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_wall2</sprite>
+      <sprite>sprites\spr_wall3</sprite>
       <sprite>sprites\spr_wallLEFT</sprite>
+      <sprite>sprites\spr_wallLEFT2</sprite>
       <sprite>sprites\spr_wallRIGHT</sprite>
+      <sprite>sprites\spr_wallRIGHT2</sprite>
       <sprite>sprites\spr_block</sprite>
       <sprite>sprites\spr_45_ne</sprite>
       <sprite>sprites\spr_45_nw</sprite>
@@ -102,6 +106,9 @@
         <sprite>sprites\spr_platform_maskRIGHT</sprite>
       </sprites>
       <sprite>sprites\spr_block_mask</sprite>
+      <sprites name="BRICK">
+        <sprite>sprites\spr_brick1</sprite>
+      </sprites>
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_sign</sprite>
@@ -394,7 +401,10 @@
     <objects name="Collision Sprites">
       <object>objects\obj_wall</object>
       <object>objects\obj_wall2</object>
+      <object>objects\obj_wall3</object>
+      <object>objects\obj_brick1</object>
       <object>objects\obj_block</object>
+      <object>objects\obj_invisblock</object>
       <object>objects\obj_ramp</object>
       <object>objects\obj_ramp_buffer</object>
     </objects>
@@ -436,7 +446,9 @@
       <object>objects\obj_platformRIGHT</object>
       <object>objects\obj_platformBIG</object>
       <object>objects\obj_platformBIGLEFT</object>
+      <object>objects\obj_platformBIGLEFT2</object>
       <object>objects\obj_platformBIGRIGHT</object>
+      <object>objects\obj_platformBIGRIGHT2</object>
     </objects>
     <objects name="htme_demo">
       <objects name="menu">
@@ -466,15 +478,20 @@
       <room>rooms\htme_rom_menu</room>
       <room>rooms\htme_rom_connecting</room>
       <room>rooms\rm_5000_5000</room>
-      <room>rooms\rm_5001_5000</room>
+      <room>rooms\rm_4999_5001</room>
       <room>rooms\rm_4999_5000</room>
       <room>rooms\rm_4999_4999</room>
       <room>rooms\rm_5000_5001</room>
+      <room>rooms\rm_5001_5001</room>
+      <room>rooms\rm_5002_5001</room>
       <room>rooms\htme_rom_demo2</room>
       <room>rooms\htme_lanlobby</room>
       <rooms name="BACKUP test rooms">
         <room>rooms\room14</room>
         <room>rooms\room15</room>
+        <room>rooms\room17</room>
+        <room>rooms\room18</room>
+        <room>rooms\room19</room>
       </rooms>
     </rooms>
     <rooms name="udphp_demo">
