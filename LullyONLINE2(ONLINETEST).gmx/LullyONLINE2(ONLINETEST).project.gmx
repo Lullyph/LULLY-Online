@@ -110,6 +110,7 @@
       <sprite>sprites\spr_ladder</sprite>
       <sprite>sprites\spr_ladderTOP</sprite>
       <sprite>sprites\spr_ladderBOT</sprite>
+      <sprite>sprites\spr_ropeclimb</sprite>
     </sprites>
     <sprites name="htme_demo">
       <sprite>sprites\htme_spr_wall</sprite>
@@ -128,6 +129,9 @@
       <sprite>sprites\sprite45</sprite>
       <sprite>sprites\spr_stairTOPR</sprite>
       <sprite>sprites\spr_stairBOTR</sprite>
+    </sprites>
+    <sprites name="RopeSwing">
+      <sprite>sprites\spr_rope</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -404,6 +408,7 @@
       <object>objects\VIEW_CHANGER_TEST</object>
       <object>objects\VIEW_CHANGER</object>
       <object>objects\CHATTEST</object>
+      <object>objects\obj_ropeswing</object>
     </objects>
     <objects name="PARENTS">
       <object>objects\obj_PLAYER</object>
@@ -461,6 +466,7 @@
       <room>rooms\htme_rom_menu</room>
       <room>rooms\htme_rom_connecting</room>
       <room>rooms\rm_5000_5000</room>
+      <room>rooms\rm_5001_5000</room>
       <room>rooms\rm_4999_5000</room>
       <room>rooms\rm_4999_4999</room>
       <room>rooms\rm_5000_5001</room>

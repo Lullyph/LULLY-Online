@@ -152,4 +152,12 @@ if(self.up_held && place_meeting_rounded(x,y,par_LADDER))
 //PLATFORMS
 
 
+//SWINGING ROPE
+
+if(place_meeting_rounded(x,y,obj_ropeswing))
+{
+    state_switch("Ladder");
+}
+
+
 
