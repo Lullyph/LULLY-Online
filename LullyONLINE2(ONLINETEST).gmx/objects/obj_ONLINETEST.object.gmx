@@ -165,6 +165,7 @@ state_create("Ladder",pb_state_ladder);
 state_create("PlatformFall",pb_state_platformfall);
 state_create("StairL",pb_state_stairL);
 state_create("StairR",pb_state_stairR);
+state_create("RopeSwing",pb_state_ropeswing);
 
 //Set the default state
 state_init("Stand");

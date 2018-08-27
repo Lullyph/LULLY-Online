@@ -155,6 +155,7 @@
       <script>scripts\pb_state_stand.gml</script>
       <script>scripts\pb_state_walk.gml</script>
       <script>scripts\pb_state_ladder.gml</script>
+      <script>scripts\pb_state_ropeswing.gml</script>
       <script>scripts\pb_state_stairL.gml</script>
       <script>scripts\pb_state_stairR.gml</script>
       <scripts name="TEMP BACKUPS">
@@ -479,11 +480,14 @@
       <room>rooms\htme_rom_connecting</room>
       <room>rooms\rm_5000_5000</room>
       <room>rooms\rm_4999_5001</room>
+      <room>rooms\rm_5001_5000</room>
       <room>rooms\rm_4999_5000</room>
+      <room>rooms\rm_4999_5002</room>
       <room>rooms\rm_4999_4999</room>
       <room>rooms\rm_5000_5001</room>
       <room>rooms\rm_5001_5001</room>
       <room>rooms\rm_5002_5001</room>
+      <room>rooms\rm_5003_5001</room>
       <room>rooms\htme_rom_demo2</room>
       <room>rooms\htme_lanlobby</room>
       <rooms name="BACKUP test rooms">
