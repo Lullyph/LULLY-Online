@@ -96,6 +96,7 @@
     <instance objName="obj_platformBIGRIGHT" x="224" y="192" name="inst_4A436A6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platformBIG" x="192" y="192" name="inst_7D8B30D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platformBIGRIGHT" x="256" y="224" name="inst_0AFDCD1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomdata" x="64" y="32" name="inst_84A6EDC9" locked="0" code="room_caption = &quot;Mountain II&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="TILESET1test" x="64" y="288" w="32" h="32" xo="32" yo="160" id="10000081" name="inst_D6AA44EF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

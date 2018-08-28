@@ -72,6 +72,7 @@
     <instance objName="obj_platform" x="352" y="32" name="inst_94B19927" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_invisblock" x="160" y="288" name="inst_0A7A857D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_invisblock" x="160" y="320" name="inst_BD7A8465" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomdata" x="64" y="32" name="inst_A592385C" locked="0" code="room_caption = &quot;Rope Swing Not Currently Working&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="TILESET1test" x="160" y="352" w="32" h="32" xo="32" yo="480" id="10000019" name="inst_E969A67B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -110,8 +110,8 @@
         <sprite>sprites\spr_brick1</sprite>
       </sprites>
     </sprites>
-    <sprites name="Misc">
-      <sprite>sprites\spr_sign</sprite>
+    <sprites name="MISC">
+      <sprite>sprites\spr_roomdata</sprite>
     </sprites>
     <sprites name="Ladders">
       <sprite>sprites\spr_ladder</sprite>
@@ -139,6 +139,9 @@
     </sprites>
     <sprites name="RopeSwing">
       <sprite>sprites\spr_rope</sprite>
+    </sprites>
+    <sprites name="Signs">
+      <sprite>sprites\spr_sign</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -389,6 +392,9 @@
   <fonts name="fonts">
     <font>fonts\fnt</font>
     <font>fonts\Calibri</font>
+    <font>fonts\m3x6</font>
+    <font>fonts\m3x7</font>
+    <font>fonts\Notalot35</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_platform_boy</object>
@@ -413,13 +419,13 @@
       <object>objects\CAMERA_GOOD_BACKUP</object>
       <object>objects\CAMERA_GOOD_BACKUP2</object>
     </objects>
-    <objects name="Misc">
-      <object>objects\obj_sign</object>
-      <object>objects\obj_signpost</object>
-      <object>objects\VIEW_CHANGER_TEST</object>
-      <object>objects\VIEW_CHANGER</object>
-      <object>objects\CHATTEST</object>
-      <object>objects\obj_ropeswing</object>
+    <objects name="MISC">
+      <object>objects\obj_CONTROL</object>
+      <objects name="TESTS">
+        <object>objects\VIEW_CHANGER_TEST</object>
+        <object>objects\CHATTEST</object>
+      </objects>
+      <object>objects\obj_roomdata</object>
     </objects>
     <objects name="PARENTS">
       <object>objects\obj_PLAYER</object>
@@ -429,6 +435,7 @@
     </objects>
     <objects name="Ladders">
       <object>objects\obj_ladder</object>
+      <object>objects\obj_ropeswing</object>
     </objects>
     <objects name="Stairs">
       <object>objects\obj_stairL</object>
@@ -472,6 +479,10 @@
     </objects>
     <objects name="udphp_demo">
       <object>objects\obj_udphphtme_lobby</object>
+    </objects>
+    <objects name="Signs">
+      <object>objects\obj_sign</object>
+      <object>objects\obj_signpost</object>
     </objects>
   </objects>
   <rooms name="rooms">
