@@ -57,11 +57,11 @@ window_set_size(view_wview,view_hview);
             <kind>1</kind>
             <string>///display roomname
 
-draw_set_font(Notalot35);
+draw_set_font(VioletVirusBOLD);
 //draw_set_color(c_red);
 draw_set_halign(fa_right);
 
-draw_text_transformed(room_width+100, 545, room_caption, 1, 1, 0);
+draw_text_transformed(room_width+100, 545, room_caption, .25, .25, 0);
 //draw_text(512, 560, room_caption);
 
 //RESET font

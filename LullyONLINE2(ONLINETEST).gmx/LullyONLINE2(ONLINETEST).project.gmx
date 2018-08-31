@@ -395,6 +395,8 @@
     <font>fonts\m3x6</font>
     <font>fonts\m3x7</font>
     <font>fonts\Notalot35</font>
+    <font>fonts\VioletVirus</font>
+    <font>fonts\VioletVirusBOLD</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_platform_boy</object>

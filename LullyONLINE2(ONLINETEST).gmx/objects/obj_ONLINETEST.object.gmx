@@ -1157,9 +1157,12 @@ if (showtext == 1)
           <argument>
             <kind>1</kind>
             <string>///Draw nameplate
+draw_set_font(VioletVirus);
+
 draw_set_color(image_blend);
 draw_set_halign(fa_center);
-draw_text(x,y-sprite_yoffset-5-string_height(self.name),self.name);
+//draw_text(x,y-sprite_yoffset-5-string_height(self.name),self.name);
+draw_text_transformed(x,y-sprite_yoffset-5-string_height(self.name)+35,self.name,.25,.25,0);
 draw_set_halign(fa_left);
 draw_set_color(c_white);
 </string>

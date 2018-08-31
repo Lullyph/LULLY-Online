@@ -163,7 +163,6 @@ draw_self();
           <argument>
             <kind>1</kind>
             <string>///FONT SET
-
 draw_set_font(signfont);
 </string>
           </argument>
