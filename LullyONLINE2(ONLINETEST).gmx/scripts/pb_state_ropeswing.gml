@@ -23,14 +23,18 @@ if(state_new)
 
 //SWINGING ROPE
 
-if(place_meeting_rounded(x,y,obj_ropeswing) )
+if(place_meeting_rounded(x,y + 150,obj_ropeswing) && self.up_held)
 {
     x_speed=0;
     y_speed=0;
-    x=obj_ropeswing.x;
+    //obj_PLAYER.x = obj_ropeswing.anchor_x + lengthdir_x(obj_ropeswing.distance, obj_ropeswing.angle);
+    obj_PLAYER.x = obj_ropeswing.hsp + obj_ropeswing.anchor_x + lengthdir_x(obj_ropeswing.distance, obj_ropeswing.angle);
+    //obj_PLAYER.y =
+    //x=obj_ropeswing.x;
     //y= obj_ropeswing.y;
-//} else {
-  //  state_switch("Air");
+} else {
+if(!self.up_held)
+  state_switch("Air");
 }
 
 

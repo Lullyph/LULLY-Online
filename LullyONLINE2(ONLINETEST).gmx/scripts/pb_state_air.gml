@@ -154,7 +154,7 @@ if(self.up_held && place_meeting_rounded(x,y,par_LADDER))
 
 //SWINGING ROPE
 
-if(place_meeting_rounded(x,y,obj_ropeswing))
+if(place_meeting_rounded(x,y,obj_ropeswing) && self.up_held)
 {
     state_switch("RopeSwing");
 }
